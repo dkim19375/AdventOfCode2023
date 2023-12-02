@@ -7,9 +7,9 @@ abstract class AdventOfCodeDay {
     fun solve() {
         println("Day $day:")
         println("Part 1:")
-        runCatching(this::solvePart1)
+        runCatching(this::solvePart1).onFailure { it.printStackTrace() }
         println("Part 2:")
-        runCatching(this::solvePart2)
+        runCatching(this::solvePart2).onFailure { it.printStackTrace() }
     }
 
     abstract fun solvePart1()
